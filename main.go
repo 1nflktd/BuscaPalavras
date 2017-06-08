@@ -47,7 +47,7 @@ func readInput() Search {
 	fmt.Println("Digite as posicoes e as letras, ie. 1-b 3-c 4-h")
 	letters, _ := reader.ReadString('\n')
 
-	lettersSplit := strings.Split(letters, " ")
+	lettersSplit := strings.Split(strings.TrimSpace(letters), " ")
 	for _, w := range lettersSplit {
 		wSplit := strings.Split(w, "-")
 		if (len(wSplit) != 2) {
